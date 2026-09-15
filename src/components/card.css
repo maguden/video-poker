@@ -7,9 +7,10 @@
   gap: 4px;
   box-sizing: border-box;
   padding: 12px;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 8px;
   background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card.hearts, 
@@ -48,5 +49,29 @@
   font-size: 24px;
   place-self: end;
   font-weight: bold;
+  transform: rotate(180deg);
 
+}
+
+.card.card--back {
+    border: 3px solid white;
+    background-color: darkred;
+
+    background-image: 
+    repeating-linear-gradient(
+        45deg,
+        transparent 0px,
+        transparent 9px,
+        white 9px,
+        white 11px
+    ),
+    repeating-linear-gradient(
+        -45deg,
+        transparent 0px,
+        transparent 9px,
+        white 9px,
+        white 11px
+    );
+
+    background-position: center;
 }

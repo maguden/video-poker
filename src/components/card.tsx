@@ -3,6 +3,7 @@ import "./card.css";
 
 type CardProps = {
   card: PlayingCard;
+  faceDown?: boolean;
 };
 
 const suitSymbols = {
@@ -12,7 +13,17 @@ const suitSymbols = {
   spades: "♠",
 };
 
-const Card = ({ card }: CardProps) => {
+const Card = ({ card, faceDown = false }: CardProps) => {
+    if (faceDown) {
+        return (
+            <div 
+                className="card card--back"
+                role="img"
+                aria-label="Kort med baksiden opp"
+            />
+        );
+    }
+
   return (
     <div className={`card ${card.suit}`}>
       <span className="rank">{card.rank}</span>

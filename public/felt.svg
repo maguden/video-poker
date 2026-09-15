@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <defs>
+    <pattern id="lines" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L120 60 L60 120 L0 60 Z" fill="none" stroke="white" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="3 5"></path>
+    </pattern>
+  </defs>
+
+  <rect width="240" height="240" fill="url(#lines)"></rect>
+
+  <g fill="white" fill-opacity="0.12" font-family="Arial, sans-serif" font-size="36" text-anchor="middle" dominant-baseline="central">
+    <text x="60" y="60">♥</text>
+    <text x="180" y="60">♦</text>
+    <text x="60" y="180">♣</text>
+    <text x="180" y="180">♠</text>
+
+    <text x="120" y="120">♥</text>
+    <text x="0" y="120">♦</text>
+    <text x="240" y="120">♦</text>
+
+    <text x="120" y="0">♣</text>
+    <text x="120" y="240">♣</text>
+
+    <text x="0" y="0">♠</text>
+    <text x="240" y="0">♠</text>
+    <text x="0" y="240">♠</text>
+    <text x="240" y="240">♠</text>
+  </g>
+</svg>
