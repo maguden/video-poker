@@ -1,0 +1,52 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 120px;
+  aspect-ratio: 2 / 3;
+  gap: 4px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.card.hearts, 
+.card.diamonds {
+  border-color: red;
+}
+
+.card.hearts .suit,
+.card.diamonds .suit {
+  color: red;
+}
+
+.card .rank {
+  color: black;
+}
+
+.card .rank {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 24px;
+  justify-self: start;
+  font-weight: bold;
+
+}
+
+.card .suit {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  font-size: 48px;
+  place-self: center;
+}
+
+.card .rank--bottom {
+  grid-column: 3;
+  grid-row: 3;
+  font-size: 24px;
+  place-self: end;
+  font-weight: bold;
+
+}
