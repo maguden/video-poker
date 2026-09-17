@@ -1,23 +1,24 @@
 import Card from "./card";
-import type { PlayingCard } from "../types/playingCard";
-import "./Game.css";
+import { useGameStore } from "../store/gamestore";
+import "./game.css";
 
-const testHand: PlayingCard[] = [
-  { suit: "hearts", rank: "A" },
-  { suit: "spades", rank: "K" },
-  { suit: "diamonds", rank: "Q" },
-  { suit: "clubs", rank: "J" },
-  { suit: "hearts", rank: "10" },
-];
-
+/* viser hånd og knapp for utdeling */
 export default function Game() {
-  return (
-    <section aria-label="Video Poker Game">
-      <div className="hand">
-        {testHand.map((card) => (
-          <Card key={`${card.suit}-${card.rank}`} card={card} />
-        ))}
-      </div>
-    </section>
-  );
+  const playerHand = useGameStore((state) => state.playerHand);
+  const dealCards = useGameStore((state) => state.dealCards);
+
+return (
+  <section aria-label="Video Poker Game">
+    <div className="hand">
+      {playerHand.map((card) => (
+        <Card key={`${card.suit}-${card.rank}`} card={card} />
+      ))}
+    </div>
+
+    <button type="button" onClick={dealCards}>
+      Deal cards
+    </button>
+
+  </section>
+);
 }
