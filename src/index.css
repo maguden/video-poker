@@ -15,7 +15,7 @@
 }
 
 body {
- margin: 0;
+ margin-top: 20px;
  color: white;
  background-color: #0b6623;
  background-image: url("/public/felt.svg");
@@ -27,13 +27,16 @@ h1 {
   font-family: "Luxurious Script", cursive;
   font-weight: 500;
   font-style: normal;
-  font-size: 80px;
+  font-size: 70px;
   color: yellow;
   line-height: 118%;
+  background-color: #28783d;
+  padding: 4px 100px;
+  width: fit-content;
+  border-radius: 100px;
+  margin: 24px auto;
+  /* border: 2px white solid; */
+  /* outline: 2px solid yellow; */
+  outline-offset: 6px;
 }
 
-
-main {
-  position: relative;
-  z-index: 1;
-}

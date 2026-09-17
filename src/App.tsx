@@ -1,11 +1,11 @@
-import Card from './components/card';
+import Game from "./components/game"
 
 function App() {
   return (
 
      <main>
        <h1>Video Poker</h1>
-       <Card card={{ suit: 'hearts', rank: 'A' }} faceDown />
+       <Game />
      </main>
      
   );
