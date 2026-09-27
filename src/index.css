@@ -1,10 +1,12 @@
 :root {
   --text: white;
   --text-h: white;
+
+
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -15,12 +17,24 @@
 }
 
 body {
- margin-top: 20px;
+ margin: 0;
  color: white;
  background-color: #0b6623;
- background-image: url("/public/felt.svg");
- background-size: 240px 240px;
+ background-image: 
+ linear-gradient(
+  rgba(11, 102, 35, 0.4),
+  rgba(11, 102, 35, 0.4) 
+ ),
+ url("/public/felt.svg");
+ background-size: 440px 440px;
  background-position: center;
+ 
+
+}
+
+p {
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -28,15 +42,41 @@ h1 {
   font-weight: 500;
   font-style: normal;
   font-size: 70px;
+  display: inline-block;
+  transform: scaleX(1.2);
   color: yellow;
+  text-decoration-line: underline;
+  text-decoration-color: yellow;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
   line-height: 118%;
   background-color: #28783d;
-  padding: 4px 100px;
+  padding: 4px 80px;
   width: fit-content;
   border-radius: 100px;
   margin: 24px auto;
-  /* border: 2px white solid; */
-  /* outline: 2px solid yellow; */
-  outline-offset: 6px;
+  border: 8px solid #0b6623;
+   outline: 2px solid white; 
+ 
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  
 }
 
+main {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main > section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}

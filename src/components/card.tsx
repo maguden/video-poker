@@ -2,10 +2,11 @@ import type { PlayingCard } from '../types/playingCard';
 import "./card.css";
 
 type CardProps = {
-  card: PlayingCard;
+  card?: PlayingCard;
   faceDown?: boolean;
 };
 
+/* kobler kortets farge til symbolet */
 const suitSymbols = {
   hearts: "♥",
   diamonds: "♦",
@@ -13,8 +14,13 @@ const suitSymbols = {
   spades: "♠",
 };
 
+/* Viser spillkort 
+ Card inneholder verdi og farge.
+ FaceDown bestemmer om baksiden skal vises.
+ Returnerer baksiden hvis faceDown er true.
+ Hvis ikke vises forsiden med verdi og symbol */
 const Card = ({ card, faceDown = false }: CardProps) => {
-    if (faceDown) {
+    if (faceDown || !card) {
         return (
             <div 
                 className="card card--back"
@@ -28,7 +34,6 @@ const Card = ({ card, faceDown = false }: CardProps) => {
     <div className={`card ${card.suit}`}>
       <span className="rank">{card.rank}</span>
       <span className="suit">{suitSymbols[card.suit]}</span>
-      <span className="rank rank--bottom">{card.rank}</span>
     </div>
   );
 };
