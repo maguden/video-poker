@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
-  width: 120px;
+  width: 150px;
   aspect-ratio: 2 / 3;
   gap: 4px;
   box-sizing: border-box;
@@ -10,12 +10,12 @@
   border: 2px solid black;
   border-radius: 8px;
   background-color: white;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card.hearts, 
 .card.diamonds {
-  border-color: red;
+  border-color: black;
 }
 
 .card.hearts .suit,
@@ -35,7 +35,7 @@
 .card .rank {
   grid-column: 1;
   grid-row: 1;
-  font-size: 24px;
+  font-size: 50px;
   justify-self: start;
   font-weight: bold;
 
@@ -44,19 +44,11 @@
 .card .suit {
   grid-column: 1 / -1;
   grid-row: 2;
-  font-size: 48px;
+  font-size: 90px;
   place-self: center;
-}
-
-.card .rank--bottom {
-  grid-column: 3;
-  grid-row: 3;
-  font-size: 24px;
-  place-self: end;
-  font-weight: bold;
-  transform: rotate(180deg);
 
 }
+
 
 .card.card--back {
     border: 3px solid white;
@@ -66,16 +58,16 @@
     repeating-linear-gradient(
         45deg,
         transparent 0px,
-        transparent 9px,
-        white 9px,
-        white 11px
+        transparent 15px,
+        white 15px,
+        white 17px
     ),
     repeating-linear-gradient(
         -45deg,
         transparent 0px,
-        transparent 9px,
-        white 9px,
-        white 11px
+        transparent 15px,
+        white 15px,
+        white 17px
     );
 
     background-position: center;
